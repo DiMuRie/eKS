@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "shape=north": { "model": "eks:escalator_ns" },
+        "shape=south": { "model": "eks:escalator_ns", "y": 180 },
+		"shape=west": { "model": "eks:escalator_ns", "y": 270 },
+		"shape=east": { "model": "eks:escalator_ns", "y": 90 },
+        "shape=ascending_east": { "model": "eks:escalator_ascending_n", "y": 90 },
+        "shape=ascending_west": { "model": "eks:escalator_ascending_n", "y": 270 },
+        "shape=ascending_north": { "model": "eks:escalator_ascending_n" },
+        "shape=ascending_south": { "model": "eks:escalator_ascending_n", "y": 180 }
+    }
+}
