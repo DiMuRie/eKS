@@ -2,6 +2,7 @@ package zhang.eks;
 
 import org.apache.logging.log4j.Logger;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -46,6 +47,7 @@ public class EnderKewlStuff {
     public static void oreRegistration(){
     	OreDictionary.registerOre("blockIron", new ItemStack(zhang.eks.KewlBlocks.EKSBlockLoader.Elevator));
     	OreDictionary.registerOre("blockEmerald", new ItemStack(zhang.eks.KewlItems.EKSItemLoader.Saw));
+    	OreDictionary.registerOre("chorus", new ItemStack(Blocks.chorus_flower));
     }
     
 

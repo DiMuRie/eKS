@@ -31,17 +31,12 @@ public class EKSItemLoader {
 
 	public static void register()
 	{
-	GameRegistry.registerItem(Saw);
+	GameRegistry.register(Saw);
 	}
 
-	public static void RegisterItemRenders()
+	public static void registerModelsI()
 	{
-	registerRender(Saw);
-	}
-
-	public static void registerRender(Item item)
-	{
-	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0 , new ModelResourceLocation(EnderKewlStuffLib.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	Saw.initModel();
 	}
 	
 }

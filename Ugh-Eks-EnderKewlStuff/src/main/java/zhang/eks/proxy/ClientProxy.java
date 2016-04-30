@@ -1,7 +1,9 @@
 package zhang.eks.proxy;
 
+import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import zhang.eks.EnderKewlStuffLib;
 import zhang.eks.KewlBlocks.EKSBlockLoader;
 import zhang.eks.KewlItems.EKSItemLoader;
 
@@ -10,11 +12,11 @@ public class ClientProxy extends CommonProxy {
 	@Override
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
-        //OBJLoader.instance.addDomain(EnderKewlStuffLib.MODID);
+        OBJLoader.INSTANCE.addDomain(EnderKewlStuffLib.MODID);
 
         // Typically initialization of models and such goes here:
-        EKSBlockLoader.registerRenders();
-        EKSItemLoader.RegisterItemRenders();
+        EKSBlockLoader.registerModelsB();
+        EKSItemLoader.registerModelsI();
     }
 	@Override
     public void init(FMLInitializationEvent e) {
