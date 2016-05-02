@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=up":     { "model": "eks:bpad_up" },
+        "facing=down":   { "model": "eks:bpad_down" },
+        "facing=east":   { "model": "eks:bpad_north", "y": 90 },
+        "facing=west":   { "model": "eks:bpad_north", "y": 270 },
+        "facing=south":  { "model": "eks:bpad_north", "y": 180 },
+        "facing=north":  { "model": "eks:bpad_north" }
+    }
+}
