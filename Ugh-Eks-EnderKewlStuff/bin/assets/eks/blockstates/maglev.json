@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=east":   { "model": "eks:maglev_straight", "y": 90 },
-        "facing=west":   { "model": "eks:maglev_straight", "y": 270 },
-        "facing=south":  { "model": "eks:maglev_straight", "y": 180 },
-        "facing=north":  { "model": "eks:maglev_straight" }
-    }
-}

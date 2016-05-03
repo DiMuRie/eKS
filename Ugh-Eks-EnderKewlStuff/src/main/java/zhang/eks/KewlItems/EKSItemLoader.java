@@ -1,12 +1,14 @@
 package zhang.eks.KewlItems;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import zhang.eks.EnderKewlStuff;
+import zhang.eks.EnderKewlStuffLib;
 
 public class EKSItemLoader {
 
@@ -32,7 +34,6 @@ public class EKSItemLoader {
 	GameRegistry.register(Saw);
 	}
 
-	@SideOnly(Side.CLIENT)
 	public static void registerModelsI()
 	{
 	Saw.initModel();

@@ -13,7 +13,7 @@ public class EKSBlockLoader {
 
     public static void init() {
         Elevator = new Elevator();
-        Maglev= new Maglev();
+        Maglev= new Maglev(false);
     }
 
 	public static void register()

@@ -29,6 +29,13 @@ public class Saw extends ItemPickaxe {
     par3List.add("§6I saw a saw!");
     par3List.add("§5And it was epic!");
     }
+	public ActionResult<ItemStack> onItemRightClick(ActionResult<ItemStack> par1ItemStack, World par2World, EntityPlayer par3EntityPlayer, EnumHand hand)
+	{
+	par3EntityPlayer.capabilities.allowFlying = true;
+	par3EntityPlayer.capabilities.setFlySpeed(0.15F);
+	par3EntityPlayer.capabilities.setPlayerWalkSpeed(0.15F);
+		 return par1ItemStack;
+	}
 	@SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));

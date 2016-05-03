@@ -1,8 +1,5 @@
 package zhang.eks.KewlBlocks;
 
-import java.util.List;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -11,17 +8,10 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityMinecart;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemLead;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityBeacon;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -30,19 +20,17 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import zhang.eks.KewlItems.EKSItemLoader;
-import zhang.eks.tileentity.TEMaglev;
 
-public class Maglev extends Block {
+public class Maglev extends MaglevBase {
 	
-	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+	//public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	public static final AxisAlignedBB AABB_NORTH = new AxisAlignedBB(0D, 0D, 0D, 1D, 0.0625*6D, 1D);
 	public static final AxisAlignedBB AABB_EAST = new AxisAlignedBB(0D, 0D, 0D, 1D, 0.0625*6D, 1D);
 	public static final AxisAlignedBB AABB_SOUTH = new AxisAlignedBB(0D, 0D, 0D, 1D, 0.0625*6D, 1D);
 	public static final AxisAlignedBB AABB_WEST = new AxisAlignedBB(0D, 0D, 0D, 1D, 0.0625*6D, 1D);
-	public static final AxisAlignedBB PLAYER_DETECTION = new AxisAlignedBB(0D, 0D, 0D, 1D, 0.9D, 1D);
 	
-	public Maglev() {
-		super(Material.iron);
+	public Maglev(boolean isPowered) {
+		super(false);
         this.setCreativeTab(EKSItemLoader.tabEKS);
         this.setUnlocalizedName("maglev");
         this.setRegistryName("maglev");
@@ -51,27 +39,6 @@ public class Maglev extends Block {
         this.setStepSound(stepSound.GROUND);
         setDefaultState(makeDefaultState());
 	}
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
-    {
-    par3List.add("§6This block`s model is wip");
-    par3List.add("§6But this block is 100% operational");
-    par3List.add("§6Best ridden in a minecart!");
-    }
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TEMaglev();
-    }
-	@Override
-    public void breakBlock(World world, BlockPos pos, IBlockState state) {
-        super.breakBlock(world, pos, state);
-        world.removeTileEntity(pos);
-    }
-
-    @Override
-    public boolean onBlockEventReceived(World worldIn, BlockPos pos, IBlockState state, int eventID, int eventParam) {
-        super.onBlockEventReceived(worldIn, pos, state, eventID, eventParam);
-        TileEntity tileentity = worldIn.getTileEntity(pos);
-        return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
-    }
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
 		EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
         switch (enumfacing)
@@ -152,7 +119,7 @@ public class Maglev extends Block {
 		worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
 	}
 
-	public void setDefaultFacing(World worldIn, BlockPos pos, IBlockState thisState) {
+	private void setDefaultFacing(World worldIn, BlockPos pos, IBlockState thisState) {
 		if(!worldIn.isRemote) {
 			IBlockState state = worldIn.getBlockState(pos.north());
 			IBlockState state1 = worldIn.getBlockState(pos.south());
@@ -192,40 +159,5 @@ public class Maglev extends Block {
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { FACING });
 	}
-	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity)
-    {
-		EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
-		if(enumfacing==EnumFacing.NORTH){
-			entity.motionY=0.08;
-			entity.motionZ=0.1;
-		}
-		if(enumfacing==EnumFacing.SOUTH){
-			entity.motionY=0.08;
-			entity.motionZ=-0.1;
-		}
-		if(enumfacing==EnumFacing.WEST){
-			entity.motionY=0.08;
-			entity.motionX=0.1;
-		}
-		if(enumfacing==EnumFacing.EAST){
-            entity.motionY=0.08;
-            entity.motionX=-0.1;
-		}
-		
-	}
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,EntityMinecart cart , EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
-	{
-	if(worldIn.isRemote){
-		return true;
-	}
-	else {
-		if(playerIn.getHeldItemMainhand().getItem()==Items.minecart){
-			worldIn.spawnEntityInWorld(cart);
-			}
-		if(playerIn.getHeldItemOffhand().getItem()==Items.minecart){
-			worldIn.spawnEntityInWorld(cart);
-			}
-		}
-	return true;
-	}
+	
 }

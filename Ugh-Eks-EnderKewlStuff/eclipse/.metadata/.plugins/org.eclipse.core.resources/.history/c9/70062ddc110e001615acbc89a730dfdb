@@ -1,7 +1,0 @@
-package zhang.eks.KewlBlocks;
-
-import net.minecraft.block.Block;
-
-public class MaglevBase extends Block {
-
-}

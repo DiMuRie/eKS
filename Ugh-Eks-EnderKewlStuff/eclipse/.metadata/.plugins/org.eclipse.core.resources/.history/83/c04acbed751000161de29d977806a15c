@@ -1,7 +1,0 @@
-package zhang.eks.tileentity;
-
-import net.minecraft.tileentity.TileEntity;
-
-public class TEMaglev extends TileEntity {
-
-}
