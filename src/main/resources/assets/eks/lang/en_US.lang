@@ -1,0 +1,16 @@
+
+language.name=English
+language.region=US
+language.code=en_US
+
+
+itemGroup.eksTab=EKS Inventory
+
+tile.elevator.name=§6Bounce Pad
+item.saw.name=§5Saw
+item.crystal_plasma_sword.name=§bCrystal Plasma Sword
+tile.maglev.name=§6Maglev rail
+tile.railing.name=§bDiamond Cyan Hardened Glass
+tile.fakeiron.name=Fake Iron
+tile.schafolding.name=§5Schafolding
+tile.gcoil.name=§60G Space Matter

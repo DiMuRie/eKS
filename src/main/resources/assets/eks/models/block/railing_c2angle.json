@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when two adgacent sides are connected.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/railing/railing0C",
+        "down": "eks:blocks/railing/railing1C_e",
+		"up": "eks:blocks/railing/railing4C",
+		"north": "eks:blocks/railing/railing2C_uw",
+		"south": "eks:blocks/railing/railing2C_ue",
+		"west": "eks:blocks/railing/railing1C_u",
+		"east": "eks:blocks/railing/railing4C"
+    }
+}

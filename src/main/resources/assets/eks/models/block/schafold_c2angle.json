@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when two adgacent sides are connected.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/schafold/schafold0C",
+        "down": "eks:blocks/schafold/schafold1C_e",
+		"up": "eks:blocks/schafold/schafold4C",
+		"north": "eks:blocks/schafold/schafold2C_uw",
+		"south": "eks:blocks/schafold/schafold2C_ue",
+		"west": "eks:blocks/schafold/schafold1C_u",
+		"east": "eks:blocks/schafold/schafold4C"
+    }
+}

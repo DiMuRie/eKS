@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when four connected sides at an angle.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/railing/railing0C",
+        "down": "eks:blocks/railing/railing4C",
+		"up": "eks:blocks/railing/railing4C",
+		"north": "eks:blocks/railing/railing4C",
+		"south": "eks:blocks/railing/railing3C_uwd",
+		"west": "eks:blocks/railing/railing4C",
+		"east": "eks:blocks/railing/railing3C_ued"
+    }
+}

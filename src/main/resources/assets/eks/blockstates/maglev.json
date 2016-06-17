@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east":   { "model": "eks:maglevns", "y": 90 },
+        "facing=west":   { "model": "eks:maglevns", "y": 270 },
+        "facing=south":  { "model": "eks:maglevns", "y": 180 },
+        "facing=north":  { "model": "eks:maglevns" }
+    }
+}

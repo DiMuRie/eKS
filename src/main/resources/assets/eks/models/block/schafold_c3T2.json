@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when three adjacent sides connected sides in a T shape.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/schafold/schafold0C",
+        "down": "eks:blocks/schafold/schafold2C_we",
+		"up": "eks:blocks/schafold/schafold4C",
+		"north": "eks:blocks/schafold/schafold3C_uwe",
+		"south": "eks:blocks/schafold/schafold3C_uwe",
+		"west": "eks:blocks/schafold/schafold4C",
+		"east": "eks:blocks/schafold/schafold4C"
+    }
+}

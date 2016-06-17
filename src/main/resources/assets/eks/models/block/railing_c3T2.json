@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when three adjacent sides connected sides in a T shape.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/railing/railing0C",
+        "down": "eks:blocks/railing/railing2C_we",
+		"up": "eks:blocks/railing/railing4C",
+		"north": "eks:blocks/railing/railing3C_uwe",
+		"south": "eks:blocks/railing/railing3C_uwe",
+		"west": "eks:blocks/railing/railing4C",
+		"east": "eks:blocks/railing/railing4C"
+    }
+}

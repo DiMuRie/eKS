@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when three adjacent sides are connected.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/schafold/schafold0C",
+        "down": "eks:blocks/schafold/schafold2C_ue",
+		"up": "eks:blocks/schafold/schafold4C",
+		"north": "eks:blocks/schafold/schafold2C_uw",
+		"south": "eks:blocks/schafold/schafold4C",
+		"west": "eks:blocks/schafold/schafold2C_ue",
+		"east": "eks:blocks/schafold/schafold4C"
+    }
+}

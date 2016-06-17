@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when only one side is connected.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/schafold/schafold0C",
+        "down": "eks:blocks/schafold/schafold0C",
+		"up": "eks:blocks/schafold/schafold4C",
+		"north": "eks:blocks/schafold/schafold1C_u",
+		"south": "eks:blocks/schafold/schafold1C_u",
+		"west": "eks:blocks/schafold/schafold1C_u",
+		"east": "eks:blocks/schafold/schafold1C_u"
+    }
+}

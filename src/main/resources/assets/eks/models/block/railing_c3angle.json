@@ -1,0 +1,13 @@
+{
+    "__comment": "Model for when three adjacent sides are connected.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/railing/railing0C",
+        "down": "eks:blocks/railing/railing2C_ue",
+		"up": "eks:blocks/railing/railing4C",
+		"north": "eks:blocks/railing/railing2C_uw",
+		"south": "eks:blocks/railing/railing4C",
+		"west": "eks:blocks/railing/railing2C_ue",
+		"east": "eks:blocks/railing/railing4C"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "__comment": "Model file for four connected sides in a cross shape.",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "eks:blocks/schafold/schafold0C",
+        "down": "eks:blocks/schafold/schafold4C",
+		"up": "eks:blocks/schafold/schafold4C",
+		"north": "eks:blocks/schafold/schafold4C",
+		"south": "eks:blocks/schafold/schafold4C",
+		"west": "eks:blocks/schafold/schafold4C",
+		"east": "eks:blocks/schafold/schafold4C"
+    }
+}
