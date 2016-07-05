@@ -51,7 +51,7 @@ public class Maglev extends Block {
 	}
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("ง6Best ridden in a minecart!");
+    par3List.add("ยง6Best ridden in a minecart!");
     }
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TEMaglev();
@@ -154,17 +154,42 @@ public class Maglev extends Block {
 			IBlockState state3 = worldIn.getBlockState(pos.east());
 			EnumFacing enumfacing = thisState.getValue(FACING);
 
-			if(enumfacing == EnumFacing.NORTH && state.isFullBlock() && !state1.isFullBlock())
+			/*if(enumfacing == EnumFacing.NORTH && state.isFullBlock() && !state1.isFullBlock())
 				enumfacing = EnumFacing.SOUTH;
 			else if(enumfacing == EnumFacing.SOUTH && state1.isFullBlock() && !state.isFullBlock())
 				enumfacing = EnumFacing.NORTH;
 			else if(enumfacing == EnumFacing.WEST && state2.isFullBlock() && !state3.isFullBlock())
 				enumfacing = EnumFacing.EAST;
 			else if(enumfacing == EnumFacing.EAST && state3.isFullBlock() && !state2.isFullBlock())
-				enumfacing = EnumFacing.WEST;
+				enumfacing = EnumFacing.WEST;*/
 
+			if(enumfacing == EnumFacing.NORTH)
+				enumfacing = EnumFacing.SOUTH;
+			else if(enumfacing == EnumFacing.SOUTH)
+				enumfacing = EnumFacing.NORTH;
+			else if(enumfacing == EnumFacing.WEST)
+				enumfacing = EnumFacing.EAST;
+			else if(enumfacing == EnumFacing.EAST)
+				enumfacing = EnumFacing.WEST;
+			else if(enumfacing == EnumFacing.NORTH.DOWN)
+				enumfacing = EnumFacing.SOUTH;
+			else if(enumfacing == EnumFacing.SOUTH.DOWN)
+				enumfacing = EnumFacing.NORTH;
+			else if(enumfacing == EnumFacing.WEST.DOWN)
+				enumfacing = EnumFacing.EAST;
+			else if(enumfacing == EnumFacing.EAST.DOWN)
+				enumfacing = EnumFacing.WEST;
+			else if(enumfacing == EnumFacing.NORTH.UP)
+				enumfacing = EnumFacing.SOUTH;
+			else if(enumfacing == EnumFacing.SOUTH.UP)
+				enumfacing = EnumFacing.NORTH;
+			else if(enumfacing == EnumFacing.WEST.UP)
+				enumfacing = EnumFacing.EAST;
+			else if(enumfacing == EnumFacing.EAST.UP)
+				enumfacing = EnumFacing.WEST;
+			
 			worldIn.setBlockState(pos, thisState.withProperty(FACING, enumfacing), 2);
-		}
+		}//shelf,gcoil
 	}
 
 	@Override

@@ -19,12 +19,11 @@ public class EKSItemLoader {
 
 	//public static ToolMaterial strondium = EnumHelper.addToolMaterial("aw", 3, 1233, 26F, 18.0F, 160);//m level,durability,miningspeed,atk dmg,enchantinility
 	public static ToolMaterial BHOD = EnumHelper.addToolMaterial("bhod", 3, -1, 50F, 10F, 500);
-	public static ToolMaterial CPSM = EnumHelper.addToolMaterial("cps", 3, 750, 150, 9, 500);
+	public static ToolMaterial CPSM = EnumHelper.addToolMaterial("cps", 3, 9999, 150, 9, 500);
 			
 
 	public static Saw Saw;
-	public static CPS CPS;
-
+	public static CPS CPS;//TODO item fo ze wud
 
 	public static void init() {
 	Saw = new Saw();

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "layerz=1": { "model": "eks:junglewoodsteps/1" },
+        "layerz=2": { "model": "eks:junglewoodsteps/2" },
+        "layerz=3": { "model": "eks:junglewoodsteps/3" },
+        "layerz=4": { "model": "eks:junglewoodsteps/4" },
+        "layerz=5": { "model": "eks:junglewoodsteps/5" },
+        "layerz=6": { "model": "eks:junglewoodsteps/6" },
+        "layerz=7": { "model": "eks:junglewoodsteps/7" },
+        "layerz=8": { "model": "eks:junglewoodsteps/8" }
+    }
+}

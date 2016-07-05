@@ -39,8 +39,8 @@ public class Fakeiron extends Block {
     }
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("ง5Fake iron,but still pretty precious....like mei");
-    par3List.add("ง5which is bae");
+    par3List.add("ยง5Fake iron,but still pretty precious....like mei");
+    par3List.add("ยง5which is bae");
     }
 	@SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()

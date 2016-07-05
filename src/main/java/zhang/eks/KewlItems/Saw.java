@@ -6,9 +6,6 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -26,8 +23,8 @@ public class Saw extends ItemPickaxe {
 	}
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("ง6I saw a saw!");
-    par3List.add("ง5And it was epic!");
+    par3List.add("ยง6I saw a saw!");
+    par3List.add("ยง5And it was epic!");
     }
 	@SideOnly(Side.CLIENT)
     public void initModel() {

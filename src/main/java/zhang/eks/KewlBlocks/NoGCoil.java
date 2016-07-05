@@ -62,7 +62,7 @@ public class NoGCoil extends Block {
     }
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("ง6Too flighty 5 me");
+    par3List.add("ยง6Too flighty 5 me");
     }
 	@SideOnly(Side.CLIENT)
 	public EnumBlockRenderType getRenderType(IBlockState state)

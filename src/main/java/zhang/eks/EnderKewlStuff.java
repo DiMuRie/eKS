@@ -1,8 +1,7 @@
 package zhang.eks;
 
-//new class
-//import mcjty.EnderKewlStuff.compat.MainCompatHandler;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
+import org.apache.logging.log4j.Logger;
+
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -10,21 +9,22 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import zhang.eks.KewlBlocks.EKSBlockLoader;
 import zhang.eks.KewlItems.EKSItemLoader;
 import zhang.eks.eventz.DUNGEONLT;
+import zhang.eks.eventz.MOLT;
 import zhang.eks.eventz.PigLootTables;
 import zhang.eks.eventz.SheepLootTables;
 import zhang.eks.tileentity.EKSTELoader;
-
-import org.apache.logging.log4j.Logger;
+import zhang.eks.worldgen.LumberJackGenerate;
 
 @Mod(modid = EnderKewlStuff.MODID, name = EnderKewlStuff.MODNAME, version = EnderKewlStuff.MODVERSION, dependencies = "required-after:Forge@[11.16.0.1865,)", useMetadata = true)
 public class EnderKewlStuff {
 
     public static final String MODID = "eks";
     public static final String MODNAME = "EnderKewlStuff";
-    public static final String MODVERSION = "1.0.5";
+    public static final String MODVERSION = "1.5.0";
 
     @SidedProxy
     public static CommonProxy proxy;
@@ -75,6 +75,8 @@ public class EnderKewlStuff {
             MinecraftForge.EVENT_BUS.register(new PigLootTables());
             MinecraftForge.EVENT_BUS.register(new SheepLootTables());
             MinecraftForge.EVENT_BUS.register(new DUNGEONLT());
+            MinecraftForge.EVENT_BUS.register(new MOLT());
+            GameRegistry.registerWorldGenerator(new LumberJackGenerate(), 0);
         }
 
         public void postInit(FMLPostInitializationEvent e) {
@@ -89,8 +91,6 @@ public class EnderKewlStuff {
             super.preInit(e);
 
             OBJLoader.INSTANCE.addDomain(MODID);
-            //ModelLoaderRegistry.registerLoader(new BakedModelLoader());
-
             // Typically initialization of models and such goes here:
             EKSBlockLoader.registerModelsB();
             EKSItemLoader.registerModelsI();

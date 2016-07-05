@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=east":   { "model": "eks:minigigarailup", "y": 90 },
+        "facing=west":   { "model": "eks:minigigarailup", "y": 270 },
+        "facing=south":  { "model": "eks:minigigarailup", "y": 180 },
+        "facing=north":  { "model": "eks:minigigarailup"}
+    }
+}

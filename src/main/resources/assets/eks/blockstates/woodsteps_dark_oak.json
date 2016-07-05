@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "layerz=1": { "model": "eks:darkoakwoodsteps/1" },
+        "layerz=2": { "model": "eks:darkoakwoodsteps/2" },
+        "layerz=3": { "model": "eks:darkoakwoodsteps/3" },
+        "layerz=4": { "model": "eks:darkoakwoodsteps/4" },
+        "layerz=5": { "model": "eks:darkoakwoodsteps/5" },
+        "layerz=6": { "model": "eks:darkoakwoodsteps/6" },
+        "layerz=7": { "model": "eks:darkoakwoodsteps/7" },
+        "layerz=8": { "model": "eks:darkoakwoodsteps/8" }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "layerz=1": { "model": "eks:sprucewoodsteps/1" },
+        "layerz=2": { "model": "eks:sprucewoodsteps/2" },
+        "layerz=3": { "model": "eks:sprucewoodsteps/3" },
+        "layerz=4": { "model": "eks:sprucewoodsteps/4" },
+        "layerz=5": { "model": "eks:sprucewoodsteps/5" },
+        "layerz=6": { "model": "eks:sprucewoodsteps/6" },
+        "layerz=7": { "model": "eks:sprucewoodsteps/7" },
+        "layerz=8": { "model": "eks:sprucewoodsteps/8" }
+    }
+}

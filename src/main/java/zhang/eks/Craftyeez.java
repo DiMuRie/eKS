@@ -45,6 +45,11 @@ public final class Craftyeez {
 				"ISI", "SIS", "ISI",
 				'S', "blockQuartz",
 				'I', "bone");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.Shelf,64),
+				"LSL", "SIS", "LSL",
+				'S', "blockGlass",
+				'I', "chest",
+				'L', "stone");
 	}
 	private static void addOreDictRecipe(ItemStack output, Object... recipe) {
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(output, recipe));

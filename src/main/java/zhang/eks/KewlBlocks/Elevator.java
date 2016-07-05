@@ -123,30 +123,30 @@ public class Elevator extends Block {
     {
 		EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
 		if(enumfacing==EnumFacing.DOWN){
-			entity.motionY=1;
+			entity.motionY=2;
 		}
 		if(enumfacing==EnumFacing.UP){
-			entity.motionY=-1;
+			entity.motionY=-2;
 		}
 		if(enumfacing==EnumFacing.NORTH){
-			entity.motionX=1;
+			entity.motionZ=2;
 		}
 		if(enumfacing==EnumFacing.SOUTH){
-			entity.motionX=-1;
+			entity.motionZ=-2;
 		}
 		if(enumfacing==EnumFacing.WEST){
-			entity.motionZ=-1;
+			entity.motionX=2;
 		}
 		if(enumfacing==EnumFacing.EAST){
-            entity.motionZ=1;
+            entity.motionX=-2;
 		}
 		
 	}
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("ง6[If Block Is Placed Sideways}");
-    par3List.add("ง6It basicly works like conveyor belts");
-    par3List.add("ง6Else it makes you bounce up/down");
+    par3List.add("ยง6[If Block Is Placed Sideways}");
+    par3List.add("ยง6It basicly works like conveyor belts");
+    par3List.add("ยง6Else it makes you bounce up/down");
     }
 	public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side)
     {

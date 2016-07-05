@@ -35,8 +35,8 @@ public class CPS extends ItemSword {
 	}
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("ง6The Crystal Plasma Sword");
-    par3List.add("ง6Is the best");
+    par3List.add("ยง6The Crystal Plasma Sword");
+    par3List.add("ยง6Is the best");
     }
 	@SideOnly(Side.CLIENT)
     public void initModel() {

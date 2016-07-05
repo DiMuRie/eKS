@@ -8,6 +8,7 @@ public final class EKSTELoader {
         GameRegistry.registerTileEntity(tileentityBouncePad.class, "bounce_pad_tile_entity");
         GameRegistry.registerTileEntity(TEMaglev.class, "maglev_tile_entity");
         GameRegistry.registerTileEntity(TEGCoil.class, "tile_entity_gcoil");
+        GameRegistry.registerTileEntity(TEShelf.class, "shelf_tile_entity");
     }
 	
 }
