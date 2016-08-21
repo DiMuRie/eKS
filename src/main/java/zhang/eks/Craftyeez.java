@@ -50,6 +50,24 @@ public final class Craftyeez {
 				'S', "blockGlass",
 				'I', "chest",
 				'L', "stone");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.Acacia,64),
+				"   ", "   ", "www",
+				'w', "acacia_wood_eks");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.Birch,64),
+				"   ", "   ", "www",
+				'w', "birch_wood_eks");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.Oak,64),
+				"   ", "   ", "www",
+				'w', "oak_wood_eks");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.Spruce,64),
+				"   ", "   ", "www",
+				'w', "spruce_wood_eks");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.Jungle,64),
+				"   ", "   ", "www",
+				'w', "jungle_wood_eks");
+		addOreDictRecipe(new ItemStack(EKSBlockLoader.DarkOak,64),
+				"   ", "   ", "www",
+				'w', "darkoak_wood_eks");
 	}
 	private static void addOreDictRecipe(ItemStack output, Object... recipe) {
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(output, recipe));

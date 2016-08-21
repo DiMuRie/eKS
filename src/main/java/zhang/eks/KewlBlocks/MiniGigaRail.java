@@ -29,6 +29,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
@@ -63,7 +64,7 @@ public class MiniGigaRail extends Block{
 	}
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("§6Best ridden in a minecart!");
+    par3List.add(TextFormatting.BLUE +"Best ridden in a minecart!");
     }
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
         return new TEMaglev();

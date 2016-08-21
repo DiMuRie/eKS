@@ -1,5 +1,254 @@
 Changelog:
-Build 2006:
+Build 2056:
+	josephcsible:
+		Fix test mod IDs, names, and versions (#3122)
+		Most of our test mods have bad IDs (uppercase) and are missing names or
+		versions. Forge produces a bunch of warnings in the console about this,
+		which
+
+Build 1.10.2-12.18.1.2055:
+	florian:
+		Make InventoryHelper#spawnItemStack use ItemStack#splitStack to avoid
+		losing capability data. (#3163)
+
+Build 1.10.2-12.18.1.2054:
+	sebastian:
+		Unlike BakedQuad, UnpackedBakedQuad does not propagate the diffuse
+		lighting flag to Vertex Consumers. Made UnpackedBakedQuad conform to
+		BakedQuad's behavior. (#3181)
+
+Build 1.10.2-12.18.1.2053:
+	LexManos:
+		Set ModelLoader.WHITE's texture size iniatlly instead of defaulting to
+		zero and being set later.
+	LexManos: Add RenderTooltipEvent (#3034)
+
+Build 1.10.2-12.18.1.2052:
+	tehgeek:
+		Fix #3165 Dispensers with buckets can destroy fluid handler blocks
+		(#3180)
+
+Build 1.9.4-12.17.0.2051:
+	tterrag1098: Add RenderTooltipEvent (#3034)
+
+Build 1.10.2-12.18.1.2050:
+	LexManos: Fix Fire not using getFireSpreadSpeed. Closes #3175
+
+Build 1.10.2-12.18.1.2049:
+	LexManos: Fix issue with stairs.
+
+Build 1.10.2-12.18.1.2048:
+	LexManos: Removed unintentional functionality when using the Splash Screen.
+
+Build 1.10.2-12.18.1.2047:
+	LexManos: Make stair culling use actual state, and be more robust. Closes #3170
+	LexManos: Fix name in legacy support in registry changes.
+	LexManos:
+		Compleetly skip FML handshake for Vanilla connections. Should fix race
+		condition. Closes #3084
+	LexManos:
+		Disable DecorateEventDebug by default. Prevents me thinking that
+		decoration is broken >.<
+
+Build 1.10.2-12.18.1.2046:
+	AlgorithmX2:
+		Fix Vertex Transformer for breaking models (#3132)
+		* Add setTexture to IVertexConsumer and propagate it.
+
+Build 1.10.2-12.18.1.2045:
+	LexManos:
+		Restone binary compatibility with registry substitution rework. Modders
+		please switch to using the provided RegistryBuilder to ensure more
+		forward compatbility. Closes #3144
+	LexManos: Fix Forge fluids not serializing properly. Closes #3152
+
+Build 1.10.2-12.18.1.2044:
+	LexManos:
+		Second pass at fixing 'Dissapearing Doors' This now more robustly fixes
+		ALL uses of get and has slight performance improvements for itterable
+		states. Closes #3139
+
+Build 1.10.2-12.18.1.2043:
+	LexManos:
+		Added config option to disable Forge's fix of Stair/Slab face culling.
+		Some vanilla resource packs exploit this issue in their custom models
+		causing unintended rendering issues.
+
+Build 1.10.2-12.18.1.2042:
+	LexManos:
+		Fixed 'Dissapearing Doors', An issue where the world would try to save
+		blockstates that are not serializeable.
+
+Build 1.10.2-12.18.1.2041:
+	cpw: Allow CommandEvent to change the parameter set. Closes #1762
+
+Build 1.10.2-12.18.1.2040:
+	cpw:
+		Another pass at substitutions - now capable of fixing up ItemBlock to
+		point at the right block when a block is substituted, should also handle
+		substituting itemblocks. There's some hackery in the way we have to
+		change the value of ItemBlock.block, but it's not too egregious in my
+		opinion.
+
+Build 1.10.2-12.18.1.2039:
+	dakotapierone: Update decorate for biomes to support Decorate event
+	cpw: Clean up AT file
+
+Build 1.10.2-12.18.1.2038:
+	cpw:
+		Fix anvil output slots being wrong by adding new ones. Closes #3121
+		without breaking existing mod workarounds for the badly ordered slots.
+
+Build 1.10.2-12.18.1.2037:
+	vincent.lee:
+		Expose vanilla brewing recipe registration (cherry picked from commit
+		24bf163)
+
+Build 1.10.2-12.18.1.2036:
+	cpw:
+		Clean up some legacy settings, making sure there's translation strings.
+		Closes  #2965 Thanks for the prompt Zaggy!
+
+Build 1.10.2-12.18.1.2035:
+	vincent.lee: Fix MC-91728 (cherry picked from commit 71f75bf)
+	cpw: Refresh patch after cherry pick (cherry picked from commit 71f75bf)
+
+Build 1.10.2-12.18.1.2034:
+	vincent.lee:
+		Remove sideonly on all other SoundType methods (cherry picked from
+		commit 46c7cac)
+
+Build 1.10.2-12.18.1.2033:
+	mnmiller1:
+		Fixed NeighborNotifyEvent not containing the piston facing direction.
+		(cherry picked from commit 5637c41)
+
+Build 1.10.2-12.18.1.2032:
+	AlgorithmX2: Use extended state for breaking models (#3086)
+
+Build 1.10.2-12.18.1.2031:
+	vincent.lee: No-nonsense getSoundType
+	cpw: Clean up block patch. Also push json update.
+
+Build 1.10.2-12.18.1.2030:
+	Creative-Multimedia-Design: Fixed sound paused/resume issue
+
+Build 1.10.2-12.18.1.2029:
+	alexandre.duponchel: FIX : IndexOutOfBoundException
+
+Build 1.10.2-12.18.1.2028:
+	cpw: Mark it for actual removal in 1.11
+	cpw: Tidy up some more todos
+	cpw:
+		Fix #3126 - duplicate stat id error - don't use the "universal
+		iterators" in statbuilding, use the one without the duplicate entries.
+		(The duplicate entry one is for rendering setup)
+
+Build 1.10.2-12.18.1.2027:
+	cpw:
+		Fix a vanilla bug with the blockstate ID map not being properly
+		symmetric with respect to block.getStateFromMeta - closes #3012 properly
+		but probably has a random MCJIRA ticket somewhere too.
+
+Build 1.10.2-12.18.1.2026:
+	vincent.lee: Add ability for custom detector rail output
+	vincent.lee: Move to a hook in EntityMinecart
+	vincent.lee: Remove event stuff
+
+Build 1.10.2-12.18.1.2025:
+	mezz: Force mipmap even if textures are the wrong size
+	mezz: Add TextureDump forge test mod
+
+Build 1.10.2-12.18.1.2024:
+	vincent.lee: Add hand-specific render event
+	vincent.lee: Add missing cancelable
+	cpw: Rename the event to RenderSpecificHandEvent
+
+Build 1.10.2-12.18.1.2023:
+	josephcsible: Add CreateFluidSourceEvent to control infinite fluid sources
+	josephcsible: Add a test for CreateFluidSourceEvent
+	josephcsible: Use CreateFluidSourceEvent for mod fluids as well
+
+Build 1.10.2-12.18.1.2022:
+	mezz: Fix hotkey with default modifier loading wrong when modifier set to NONE
+
+Build 1.10.2-12.18.1.2021:
+	bernhard.bonigl:
+		Add shouldCauseBlockBreakReset callback to Item. This allows to keep
+		breaking blocks if the NBT or similar changes.
+
+Build 1.10.2-12.18.1.2020:
+	Mumfrey: Store member field mappings in the mapping table, possible fix for #3043
+
+Build 1.10.2-12.18.1.2019:
+	cpw:
+		Something that needs to happen: warn people about bad modids- if they're
+		not lowercased, or if they're too long.
+
+Build 1.10.2-12.18.1.2018:
+	ezterry3:
+		Fix async race condition on new chunks (closes #3020) (#3090)
+		This patch fixes a race condition that sometimes caused a just generated
+		chunk
+		structures to
+		generated version
+		chunk.
+		 This patch ensures when ProvideChunk calls LoadChunk synchronously we
+		always
+		condition without
+		already saved to disk.
+		 Thus this should retain the async functionality from PR #2946 while
+		preventing
+
+Build 1.10.2-12.18.1.2017:
+	cpw:
+		Some test harness stuffs. Time to get the registry manager properly
+		tested.
+	cpw:
+		More tests. Substitutions now work, and a fix is included. *sigh* Closes
+		too many bugs to count.
+	cpw: Some more substitution tests. It seems like it's working as it should.
+	cpw: Some dummy block replacement tests - it seems they work correctly.
+	cpw: Add the new tests into the suite
+	cpw:
+		Some tweaks to ContainedDeps - it should extract to a file in
+		versionedMods directly, even if the tag in the jar has a subpath
+		element. It'll also skip if there is a matching filename in the main
+		mods dir.
+
+Build 1.10.2-12.18.1.2016-failtests:
+	cpw: Some more substitution tests. It seems like it's working as it should.
+	cpw: Some dummy block replacement tests - it seems they work correctly.
+
+Build 1.10.2-12.18.1.2014:
+	LexManos:
+		Added support for using static methods as event listeners, Register the
+		.class instead of an instance. And added an improvement to calltime
+		listener rebuilding.
+
+Build 1.10.2-12.18.1.2013:
+	cpw: Lets make a half-decent readme. Thanks to Rorax for the install video!
+
+Build 1.10.2-12.18.1.2012:
+	mezz: Add Forge fluid handler test
+
+Build 1.10.2-12.18.1.2011:
+	LexManos: Bump version for a RB
+
+Build 1.10.2-12.18.0.2010:
+	bernhard.bonigl:
+		Add an event that allows to modify the looting level based on damage
+		source
+
+Build 1.10.2-12.18.0.2009:
+	williewillus: Add throwable impact event (#3071)
+
+Build 1.10.2-12.18.0.2007-1.10.0:
+	LexManos:
+		Fix hopper extract behavior being broken on edge cases due to
+		IItemHandler capability. Closes #3062
+
+Build 1.10.2-12.18.0.2006-1.10.0:
 	LexManos:
 		Fixed FPS graph and new debug lines not being rendered in Debug screen.
 		Closes #3054

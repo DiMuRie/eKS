@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -39,8 +40,7 @@ public class Fakeiron extends Block {
     }
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("§5Fake iron,but still pretty precious....like mei");
-    par3List.add("§5which is bae");
+    par3List.add(TextFormatting.BLUE +"Fake iron,but still pretty precious...");
     }
 	@SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()

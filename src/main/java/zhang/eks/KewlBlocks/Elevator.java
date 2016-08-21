@@ -21,6 +21,7 @@ import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
@@ -144,9 +145,9 @@ public class Elevator extends Block {
 	}
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("§6[If Block Is Placed Sideways}");
-    par3List.add("§6It basicly works like conveyor belts");
-    par3List.add("§6Else it makes you bounce up/down");
+    par3List.add(TextFormatting.BLUE +"[If Block Is Placed Sideways}");
+    par3List.add(TextFormatting.BLUE +"It basicly works like conveyor belts");
+    par3List.add(TextFormatting.BLUE +"Else it makes you bounce up/down");
     }
 	public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side)
     {

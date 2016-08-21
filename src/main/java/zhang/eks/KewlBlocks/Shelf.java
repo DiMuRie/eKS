@@ -17,6 +17,7 @@ import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
@@ -110,11 +111,11 @@ public class Shelf extends Block implements ITileEntityProvider {
     }
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4)
     {
-    par3List.add("§rStores a maximum of 64 items of the same type");
-    par3List.add("§bAvailable actions:");
-    par3List.add("§b[Right Click]§rPuts curent ItemStack from");
-    par3List.add("§rplayer`s main hand in the block`s inventory");
-    par3List.add("§b[Right Click while block has item and player`s hand is empty]");
-    par3List.add("§rtakes the ItemStack from the block and transfers to the player`s main hand");
+    par3List.add(TextFormatting.BLUE +"Stores a maximum of 64 items of the same type");
+    par3List.add(TextFormatting.BLUE +"Available actions:");
+    par3List.add(TextFormatting.BLUE +"[Right Click]§rPuts curent ItemStack from");
+    par3List.add(TextFormatting.BLUE +"player`s main hand in the block`s inventory");
+    par3List.add(TextFormatting.BLUE +"[Right Click while block has item and player`s hand is empty]");
+    par3List.add(TextFormatting.BLUE +"takes the ItemStack from the block and transfers to the player`s main hand");
     }
 }

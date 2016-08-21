@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "connected_east=false,connected_north=false,connected_south=false,connected_west=false": { "model": "eks:alonne_half_fence_part" },
+        "connected_east=false,connected_north=true,connected_south=false,connected_west=false": { "model": "eks:half_fence_part", "y": 270},
+        "connected_east=true,connected_north=false,connected_south=false,connected_west=false": { "model": "eks:half_fence_part"},
+        "connected_east=false,connected_north=false,connected_south=true,connected_west=false": { "model": "eks:half_fence_part", "y": 90},
+        "connected_east=false,connected_north=false,connected_south=false,connected_west=true": { "model": "eks:half_fence_part", "y": 180},
+        "connected_east=true,connected_north=true,connected_south=false,connected_west=false": { "model": "eks:2half_fence_part", "y": 270},
+        "connected_east=true,connected_north=false,connected_south=true,connected_west=false": { "model": "eks:2half_fence_part"},
+        "connected_east=false,connected_north=false,connected_south=true,connected_west=true": { "model": "eks:2half_fence_part", "y": 90},
+        "connected_east=false,connected_north=true,connected_south=false,connected_west=true": { "model": "eks:2half_fence_part", "y": 180},
+        "connected_east=false,connected_north=true,connected_south=true,connected_west=false": { "model": "eks:middlee_fence_part", "y": 90},
+        "connected_east=true,connected_north=false,connected_south=false,connected_west=true": { "model": "eks:middlee_fence_part"},
+        "connected_east=true,connected_north=true,connected_south=true,connected_west=false": { "model": "eks:3half_fence_part", "y": 270},
+        "connected_east=true,connected_north=false,connected_south=true,connected_west=true": { "model": "eks:3half_fence_part"},
+        "connected_east=false,connected_north=true,connected_south=true,connected_west=true": { "model": "eks:3half_fence_part", "y": 90},
+        "connected_east=true,connected_north=true,connected_south=false,connected_west=true": { "model": "eks:3half_fence_part", "y": 180},
+        "connected_east=true,connected_north=true,connected_south=true,connected_west=true": { "model": "eks:4half_fence_part"}
+    }
+}

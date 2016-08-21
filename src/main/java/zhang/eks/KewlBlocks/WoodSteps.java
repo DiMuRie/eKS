@@ -98,6 +98,10 @@ public class WoodSteps extends Block {
     {
         return BlockRenderLayer.CUTOUT;
     }
+	public boolean isOpaqueCube(IBlockState state)
+    {
+        return false;
+    }
 	@Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
     {

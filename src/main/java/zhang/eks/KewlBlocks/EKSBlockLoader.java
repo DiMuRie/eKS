@@ -26,6 +26,7 @@ public class EKSBlockLoader {
 	public static Jungle Jungle;
 	public static Oak Oak;
 	public static Spruce Spruce;
+	public static Fence Fence;
 
     public static void init() {
         Elevator = new Elevator();
@@ -42,6 +43,7 @@ public class EKSBlockLoader {
     	Jungle=new Jungle();
     	Oak=new Oak();
     	Spruce=new Spruce();
+    	Fence=new Fence();
     }
 	@SideOnly(Side.CLIENT)
     public static void registerModelsB()
@@ -60,6 +62,7 @@ public class EKSBlockLoader {
     	Jungle.initModel();
     	Oak.initModel();
     	Spruce.initModel();
+    	Fence.initModel();
     }    	
     
 	
